@@ -1,0 +1,16 @@
+extends layout
+block append head
+    script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/chat.js')
+block content
+    section#chatroom
+        div#messages
+        input#message(type='text', placeholder='Enter your message here')
+        input#send(type='button', value='Send')
+    section#nameform.modal
+        div.backdrop
+        div.popup
+            div.pophead Please enter a nick name
+            div.popbody
+                input#nickname(type='text')
+                input#setname(type='button', value='Set Name')
